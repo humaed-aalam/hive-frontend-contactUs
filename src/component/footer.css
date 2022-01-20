@@ -1,0 +1,148 @@
+/* Standalone footer styles */
+
+/* html structure:
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="footer__col">
+                <div class="footer__logos">
+                    <a href="#"><img src="./assets/svgs/hive_logo.svg" alt="Hive Logo" class="logo"/></a>
+                    <a href="#"><img src="./assets/svgs/jmi_logo.svg" alt="Jamia Logo" class="logo"/></a>
+                </div>
+                <p class="footer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto esse harum dignissimos tenetur vel rerum accusantim!</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__heading">Contact</h4>
+                <div class="footer__social-links">
+                    <a href="#"><img src="./assets/svgs/social_links/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="#"><img src="./assets/svgs/social_links/twitter.svg" alt="Twitter"></a>
+                    <a href="#"><img src="./assets/svgs/social_links/email.svg" alt="Email"></a>
+                    <a href="#"><img src="./assets/svgs/social_links/instagram.svg" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__heading">Pages</h4>
+                <div class="footer__pages-links">
+                    <ul class="footer__pages-links-col">
+                        <li><a href="#" class="footer__pages-link">Home</a></li>
+                        <li><a href="#" class="footer__pages-link">About Us</a></li>
+                        <li><a href="#" class="footer__pages-link">Events</a></li>
+                        <li><a href="#" class="footer__pages-link">Projects</a></li>
+                        <li><a href="#" class="footer__pages-link">Contact</a></li>
+                    </ul>
+                    <ul class="footer__pages-links-col">
+                        <li><a href="#" class="footer__pages-link">Blogs</a></li>
+                        <li><a href="#" class="footer__pages-link">Discussion Forums</a></li>
+                        <li><a href="#" class="footer__pages-link">Resources</a></li>
+                        <li><a href="#" class="footer__pages-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__heading">Location</h4>
+                <p class="footer__text">Department of Computer Science, Jamia Millia Islamia,</p>
+                <p class="footer__text">Maulana Muhammad Ali Jauhar Marg</p>
+                <p class="footer__text">Jamia Nagar, New Delhi</p>
+                <p class="footer__text">PIN - 110025</p>
+            </div>
+        </div>
+    </footer>
+*/
+
+.footer {
+    margin: 18rem 0 0;
+    width: 100%;
+    background: var(--white);
+    box-shadow: var(--faded-shadow);
+    padding: 3rem 0 12rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer__col {
+    width: 22%;
+}
+
+.footer__logos {
+    display: flex;
+    align-items: center;
+}
+
+.footer__text {
+    font-size: 1.4rem;
+    color: var(--boulder);
+}
+
+.footer__heading {
+    font-size: 2rem;
+    color: var(--hive-blue);
+    margin: 0 0 2rem;
+}
+
+.footer__social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__pages-links {
+    display: flex;
+    gap: 3rem;
+    font-size: 1.6rem;
+}
+
+.footer__pages-links-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer__pages-link {
+    padding: 1rem 0;
+}
+
+.footer__pages-link:hover {
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 85%;
+    }
+
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    .hero-section img {
+        width: 260px;
+    }
+    
+    .hero-section__text-part {
+        margin: 2rem 0;
+    }
+    
+    .hero-section__heading {
+        font-size: 3rem;
+    }
+    
+    .hero-section__text {
+        margin: 3rem 0;
+    }
+
+    .blog-card {
+        width: 100%;
+    }
+
+    .footer {
+        margin: 8rem 0 0;
+        padding: 0 0 3rem;
+    }
+    .footer__col {
+        width: 100%;
+        margin-top: 3rem;
+    }
+}

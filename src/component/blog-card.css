@@ -1,0 +1,62 @@
+/* Standalone card styles */
+/* html structure:
+    <div class="blog-card">
+        <img src="assets/images/demo.jpg" alt="" class="blog-card__image">
+        <div class="blog-card__details">
+            <h3 class="blog-card__heading">Title of the blog</h3>
+            <p class="blog-card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore modi veritatis sapiente distinctio eius magni</p>
+            <button class="btn btn--outline">Read More</button>
+        </div>
+    </div>
+*/
+
+.blog-card {
+    max-width: 35rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    background: var(--white);
+    /* Refer to the variable defined in the main stylesheet */
+    box-shadow: var(--faded-shadow);
+    transition: all 200ms ease-in-out;
+}
+
+.blog-card:hover {
+    transform: translateY(-1.5rem);
+    box-shadow: var(--faded-shadow-hover);
+}
+
+.blog-card__image {
+    width: 100%;
+}
+
+.blog-card__details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.blog-card__heading {
+    font-size: 3rem;
+    color: var(--hive-blue);
+    /* Line clamp styles, used to make sure that the heading does'nt affect the height of the card and card height remains same. */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.blog-card__text {
+    font-size: 1.6rem;
+    color: var(--boulder);
+    /* Line clamp styles, used to make sure that the text does'nt affect the height of the card and card height remains same. */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.blog-card .btn {
+    align-self: flex-end;
+}
+

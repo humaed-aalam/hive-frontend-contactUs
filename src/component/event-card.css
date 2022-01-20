@@ -1,0 +1,62 @@
+/* Standalone card styles */
+/* html structure:
+    <div class="event-card">
+        <img src="assets/images/demo.jpg" alt="" class="event-card__image">
+        <div class="event-card__details">
+            <h3 class="event-card__heading">Title of the Event</h3>
+            <p class="event-card__date">14-01-2022</p>
+            <p class="event-card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore modi veritatis sapiente distinctio eius magni vero, consequuntur ullam consectetur expedita maiores magnam laudantium omnis beatae aspernatur, dolorum placeat vel ipsam.</p>
+            <button class="btn btn--outline">Read More</button>
+        </div>
+    </div>
+*/
+
+.event-card {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    border-bottom: 2px var(--silver) solid;
+    padding: 0 0 2rem;
+}
+
+.event-card__image {
+    border-radius: 2rem;
+    max-width: 30%;
+    object-fit: cover;
+}
+
+.event-card__details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.event-card__heading {
+    font-size: 3rem;
+    color: var(--hive-blue);
+    /* Line clamp styles, used to make sure that the heading does'nt affect the height of the card and card height remains same. */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.event-card__date {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--boulder);
+}
+
+.event-card__text {
+    font-size: 1.6rem;
+    color: var(--boulder);
+    /* Line clamp styles, used to make sure that the text does'nt affect the height of the card and card height remains same. */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.event-card .btn {
+    align-self: flex-end;
+}

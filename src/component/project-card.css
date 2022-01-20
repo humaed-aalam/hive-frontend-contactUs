@@ -1,0 +1,78 @@
+/* Standalone card styles */
+/* html structure:
+    <div class="project-card">
+        <h3 class="project-card__heading">Title of the project</h3>
+        <div class="project-card__details">
+            <p class="project-card__text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores ab totam, quo cupiditate nesciunt sed deserunt.
+            </p>
+            <div class="project-card__last-row">
+                <div class="project-card__technology">
+                    <img src="./assets/images/technologies/html.png" alt="HTML" class="project-card__tech-icon">
+                    <img src="./assets/images/technologies/css.png" alt="CSS" class="project-card__tech-icon">
+                    <img src="./assets/images/technologies/js.png" alt="JS" class="project-card__tech-icon">
+                    <img src="./assets/images/technologies/nodejs.png" alt="NodeJS" class="project-card__tech-icon">
+                    <img src="./assets/images/technologies/mongodb.png" alt="MongoDB" class="project-card__tech-icon">
+                </div>
+                <button class="btn btn--outline">Read More</button>
+            </div>
+        </div>
+    </div>
+*/
+
+.project-card {
+    max-width: 35rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    overflow: hidden;
+    background: var(--white);
+    /* Refer to the variable defined in the main stylesheet */
+    box-shadow: var(--faded-shadow);
+    transition: all 200ms ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-1.5rem);
+    box-shadow: var(--faded-shadow-hover);
+}
+
+.project-card__details {
+    margin: 1rem 0 0;
+}
+
+.project-card__heading {
+    font-size: 3rem;
+    color: var(--hive-blue);
+    /* Line clamp styles, used to make sure that the heading does'nt affect the height of the card and card height remains same. */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.project-card__text {
+    font-size: 1.6rem;
+    color: var(--boulder);
+    /* Line clamp styles, used to make sure that the text does'nt affect the height of the card and card height remains same. */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.project-card__last-row {
+    margin: 5rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.project-card__technology {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.project-card__tech-icon {
+    height: 3rem;
+}

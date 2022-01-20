@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+ /* Style resests */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* Variables */
+:root {
+    --hive-blue : #004868;
+    --hover-blue : #07587a;
+    --white : #ffffff;
+    --boulder : #707070;
+    --silver : #f3f3f3;
+    --faded-shadow : 0 0 4rem #00000020;
+    --faded-shadow-hover : 0 1.5rem 4rem #00000015;
+}
+
+
+/* Base styles */
+html {
+    /*
+    Doing this to make the default text size 10px (62.5% of 16px)
+    So it's easier to calculte px values using rem.
+    1rem = 10px
+    */
+    font-size: 62.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto
+}
+
+
+/* Utility classes */
+.text--bold {
+    font-weight: 700; 
+}
+
+.text--body {
+    font-size: 1.6rem;
+    color: var(--boulder);
+}
+
+.section-heading {
+    font-size: 3.6rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: var(--hive-blue);
+}
+
+
+/* Components */
+.btn {
+    min-width: 12rem;
+    padding: 1.2rem 1.8rem;
+    background: var(--hive-blue);
+    border: 2px var(--hive-blue) solid;
+    border-radius: 0.8rem;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.btn:hover {
+    background: var(--hover-blue);
+}
+
+.btn--outline {
+    background: none;
+    color: var(--hive-blue);
+}
+
+.btn--outline:hover {
+    background: var(--hive-blue);
+    color: var(--white);
+}
+
+
+/* Header Section Styles */
+.header {
+    width: 100%;
+    background: var(--white);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 3.5rem 0;
+    color: var(--hive-blue);
+}
+
+.logo {
+    width: 9rem;
+}
+
+.navbar__link-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.navbar__link {
+    width: 200rem;
+    padding: 0.8rem 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    transition: all 50ms ease-in-out;
+}
+
+.navbar__link--active {
+    text-shadow: 0 0 .65px var(--hive-blue), 0 0 .65px var(--hive-blue);
+    border-bottom: 2px var(--hive-blue) solid;
+}
+
+.navbar__link:hover {
+    /* Using text shadow to stimulate font weight, fix for layout shift on hover */
+    text-shadow: 0 0 .65px var(--hive-blue), 0 0 .65px var(--hive-blue);
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 6.8rem 0;
+}
+
+.hero-section__text-part {
+    margin: 7rem 0;
+}
+
+.hero-section__heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--hive-blue);
+}
+
+.hero-section__text {
+    margin: 3rem 0;
+    font-size: 1.6rem;
+    color: var(--boulder);
+    max-width: 60rem;
+}
+
+
+/* About Hive Section Styles */
+.about-hive {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 6rem 0;
+}
+
+.about-hive .btn {
+    align-self: flex-end;
+}
+
+
+/* Blog Cards Section Styles */
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 6em 0;
+}
+
+.blog-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.blog-container .btn {
+    align-self: center;
+}
+
+
+/* Events Section Styles */
+.events-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 6em 0;
+}
+
+.events-card-container {
+    box-shadow: var(--faded-shadow);
+    width: 100%;
+    border-radius: 2rem;
+    padding: 3rem;
+    background: var(--white);
+}
+
+.events-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.events-container .btn {
+    align-self: center;
+}
+
+
+/* Project Section Styles */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 6em 0;
+}
+
+.projects-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.projects-container .btn {
+    align-self: center;
+}

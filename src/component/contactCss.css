@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+img{
+    width: 70%;
+    max-width:70.375rem;
+}
+.contact-article{
+ /*   background-color: red; */
+    width:80%;
+    margin:auto;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    align-items: center;
+    justify-content: center;
+}
+.text-container{
+    width:50%;
+    padding-left: 4rem;
+    padding-right:0;
+}
+.contact-header{
+  /*  background-color: pink; */
+    font-family: 'Montserrat', sans-serif;;
+    width:max-content;
+    font-size:5.85rem;
+    color:#004868;
+    font-weight: bold;
+}
+.subheading-div{
+ /*   background-color: orange; */
+    width: max-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:1.625rem;
+    padding-top: 7%;
+    padding-bottom: 15%;
+    color:#707070;
+}
+.form-inner-div{
+   /*background-color: palegreen;*/
+    width: 190%;
+}
+.image-container{
+   /*background-color: palevioletred;*/
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   padding-top:3%;
+   padding-right: 5%;
+}
+input{
+    width:98%;
+    font-size:1.625rem;
+    padding:2% 2%;
+    margin-bottom:3%;
+    border-radius:8px;
+    border-width: 3px;
+    border-style: solid;
+    border-color:#004868;
+    box-shadow: 5px 5px 10px 2px rgba(192, 192, 192, 0.5);
+}
+#message-box{
+    padding-top: 3%;
+    padding-bottom:40%;
+}
+.submit-button{
+    border-radius:0.8125rem;
+    font-size:1.4625rem;
+    padding:1rem 3.4125rem;
+    margin-top:2%;
+    color: white;
+    background-color: #004868;
+    border-color:#004868;
+    border-style: solid;
+    font-weight: bold;
+    cursor: pointer;
+}
+.submit-button:hover{
+    background-color: #07587a;
+}
+@media screen and (max-width:1200px){
+    .contact-article{
+        grid-template-columns: unset;
+        grid-template-rows: 1fr 1fr;
+    }
+    .image-container{
+        display:unset;
+    }
+}
+@media screen and (max-width:1200px) and (min-width:800px){
+    input{
+        width:40.625rem;
+        padding: 0.8125rem 0.325rem;
+        margin-bottom:3%;
+    }
+}
+@media screen and (max-width:800px){
+    .subheading-div{
+        width:fit-content;
+    }    
+}
+@media screen and (max-width:400px){
+    .contact-header{
+        width:fit-content;
+    }    
+}
